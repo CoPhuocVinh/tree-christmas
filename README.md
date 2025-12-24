@@ -1,72 +1,101 @@
-# 🎄 Grand Luxury Interactive 3D Christmas Tree
+# 🎄 Cây Thông Noel 3D Tương Tác Sang Trọng
 
-> 一个基于 **React**, **Three.js (R3F)** 和 **AI 手势识别** 的高保真 3D 圣诞树 Web 应用。
+> Một ứng dụng web 3D cây thông Noel độ trung thực cao dựa trên **React**, **Three.js (R3F)** và **Nhận diện cử chỉ AI**.
 
-这个项目不仅仅是一棵树，它是一个承载记忆的交互式画廊。成百上千个粒子、璀璨的彩灯和悬浮的拍立得照片共同组成了一棵奢华的圣诞树。用户可以通过手势控制树的形态（聚合/散开）和视角旋转，体验电影级的视觉盛宴。
+Dự án này không chỉ là một cái cây, mà là một phòng trưng bày tương tác chứa đựng những ký ức. Hàng trăm nghìn hạt phát sáng, đèn màu rực rỡ và những tấm ảnh polaroid lơ lửng cùng nhau tạo nên một cây thông Noel lộng lẫy. Người dùng có thể điều khiển hình dạng cây (tập hợp/phân tán) và góc nhìn thông qua cử chỉ tay, trải nghiệm bữa tiệc hình ảnh đẳng cấp điện ảnh.
 
 ![Project Preview](public/preview.png)
-*(注：建议在此处上传一张你的项目运行截图)*
+*(Lưu ý: Nên tải lên một ảnh chụp màn hình khi chạy dự án)*
 
-## ✨ 核心特性
+## ✨ Tính Năng Chính
 
-* **极致视觉体验**：由 45,000+ 个发光粒子组成的树身，配合动态光晕 (Bloom) 和辉光效果，营造梦幻氛围。
-* **记忆画廊**：照片以“拍立得”风格悬浮在树上，每一张都是一个独立的发光体，支持双面渲染。
-* **AI 手势控制**：无需鼠标，通过摄像头捕捉手势即可控制树的形态（聚合/散开）和视角旋转。
-* **丰富细节**：包含动态闪烁的彩灯、飘落的金银雪花、以及随机分布的圣诞礼物和糖果装饰。
-* **高度可定制**：**支持用户轻松替换为自己的照片，并自由调整照片数量。**
+* **Trải nghiệm hình ảnh tuyệt vời**: Thân cây được tạo từ hơn 45,000 hạt phát sáng, kết hợp với hiệu ứng Bloom và ánh sáng động, tạo nên bầu không khí mơ màng.
+* **Phòng trưng bày ký ức**: Ảnh lơ lửng trên cây theo phong cách "polaroid", mỗi tấm đều là một nguồn sáng riêng biệt, hỗ trợ render hai mặt.
+* **Điều khiển cử chỉ AI**: Không cần chuột, chỉ cần dùng camera thu nhận cử chỉ để điều khiển hình dạng cây (tập hợp/phân tán) và xoay góc nhìn.
+* **Chi tiết phong phú**: Bao gồm đèn màu nhấp nháy động, tuyết vàng bạc rơi, cùng hộp quà và kẹo Giáng sinh phân bố ngẫu nhiên.
+* **Tùy chỉnh cao**: **Hỗ trợ người dùng dễ dàng thay thế bằng ảnh của riêng mình và tự do điều chỉnh số lượng ảnh.**
 
-## 🛠️ 技术栈
+## 🛠️ Công Nghệ Sử Dụng
 
-* **框架**: React 18, Vite
-* **3D 引擎**: React Three Fiber (Three.js)
-* **工具库**: @react-three/drei, Maath
-* **后期处理**: @react-three/postprocessing
-* **AI 视觉**: MediaPipe Tasks Vision (Google)
+* **Framework**: React 18, Vite
+* **Engine 3D**: React Three Fiber (Three.js)
+* **Thư viện công cụ**: @react-three/drei, Maath
+* **Hậu xử lý**: @react-three/postprocessing
+* **AI Vision**: MediaPipe Tasks Vision (Google)
 
-## 🚀 快速开始
+## 🚀 Bắt Đầu Nhanh
 
-### 1. 环境准备
-确保你的电脑已安装 [Node.js](https://nodejs.org/) (建议 v18 或更高版本)。
+### 1. Chuẩn bị môi trường
+Đảm bảo máy tính của bạn đã cài đặt [Node.js](https://nodejs.org/) (khuyến nghị v18 trở lên).
 
-### 2. 安装依赖
-在项目根目录下打开终端，运行：```bash npm install
-### 3. 启动项目
+### 2. Cài đặt dependencies
+Mở terminal tại thư mục gốc của dự án, chạy:
+
+```bash
+npm install
+```
+
+### 3. Khởi chạy dự án
+
+```bash
 npm run dev
-### 🖼️ 自定义照片
-### 1. 准备照片
-找到项目目录下的 public/photos/ 文件夹。
+```
 
-顶端大图/封面图：命名为 top.jpg（将显示在树顶的立体五角星上）。
+## 🖼️ Tùy Chỉnh Ảnh
 
-树身照片：命名为 1.jpg, 2.jpg, 3.jpg ... 依次类推。
+### 1. Chuẩn bị ảnh
+Tìm thư mục `public/photos/` trong thư mục dự án.
 
-建议：使用正方形或 4:3 比例的图片，文件大小不宜过大（建议单张 500kb 以内以保证流畅度）
-### 2. 替换照片
-直接将你自己的照片复制到 public/photos/ 文件夹中，覆盖原有的图片即可。请保持文件名格式不变（1.jpg, 2.jpg 等）。
-### 3. 修改照片数量 (增加或减少)
-如果你放入了更多照片（例如从默认的 31 张增加到 100 张），需要修改代码以通知程序加载它们。
-打开文件：src/App.tsx
-找到大约 第 19 行 的代码：// --- 动态生成照片列表 (top.jpg + 1.jpg 到 31.jpg) ---
-const TOTAL_NUMBERED_PHOTOS = 31; // <--- 修改这个数字！
-### 🖐️ 手势控制说明
-* **本项目内置了 AI 手势识别系统，请站在摄像头前进行操作（屏幕右下角有 DEBUG 按钮可查看摄像头画面）**：
-🖐 张开手掌 (Open Palm)	Disperse (散开)	圣诞树炸裂成漫天飞舞的粒子和照片
-✊ 握紧拳头 (Closed Fist)	Assemble (聚合)	所有元素瞬间聚合成一棵完美的圣诞树
-👋 手掌左右移动	旋转视角	手向左移，树向左转；手向右移，树向右转
-👋 手掌上下移动	俯仰视角	手向上移，视角抬高；手向下移，视角降低
-### ⚙️ 进阶配置
-* **如果你熟悉代码，可以在 src/App.tsx 中的 CONFIG 对象里调整更多视觉参数**：
-  const CONFIG = {
-  colors: { ... }, // 修改树、灯光、边框的颜色
+- **Ảnh lớn trên đỉnh/Ảnh bìa**: Đặt tên là `top.jpg` (sẽ hiển thị trên ngôi sao 3D ở đỉnh cây).
+- **Ảnh trên thân cây**: Đặt tên lần lượt là `1.jpg`, `2.jpg`, `3.jpg`... 
+
+> 💡 **Khuyến nghị**: Sử dụng ảnh vuông hoặc tỷ lệ 4:3, kích thước file không nên quá lớn (khuyến nghị dưới 500kb mỗi ảnh để đảm bảo mượt mà)
+
+### 2. Thay thế ảnh
+Chỉ cần copy ảnh của bạn vào thư mục `public/photos/`, ghi đè lên các ảnh gốc. Hãy giữ nguyên định dạng tên file (`1.jpg`, `2.jpg`, v.v.).
+
+### 3. Thay đổi số lượng ảnh (thêm hoặc bớt)
+Nếu bạn đặt nhiều ảnh hơn (ví dụ từ 31 ảnh mặc định tăng lên 100 ảnh), cần sửa code để thông báo cho chương trình tải chúng.
+
+Mở file: `src/App.tsx`
+
+Tìm dòng code khoảng **dòng 19**:
+
+```typescript
+// --- Tự động tạo danh sách ảnh (top.jpg + 1.jpg đến 31.jpg) ---
+const TOTAL_NUMBERED_PHOTOS = 31; // <--- Sửa số này!
+```
+
+## 🖐️ Hướng Dẫn Điều Khiển Cử Chỉ
+
+Dự án này tích hợp hệ thống nhận diện cử chỉ AI, hãy đứng trước camera để thao tác (có nút DEBUG ở góc dưới bên phải màn hình để xem hình ảnh camera):
+
+| Cử chỉ | Hành động | Mô tả |
+|--------|-----------|-------|
+| 🖐 Xòe bàn tay (Open Palm) | Phân tán (Disperse) | Cây thông nổ tung thành các hạt và ảnh bay khắp nơi |
+| ✊ Nắm chặt tay (Closed Fist) | Tập hợp (Assemble) | Tất cả các thành phần ngay lập tức tập hợp thành cây thông hoàn hảo |
+| 👋 Di chuyển tay trái/phải | Xoay góc nhìn | Tay di sang trái, cây quay trái; tay di sang phải, cây quay phải |
+| 👋 Di chuyển tay lên/xuống | Góc nhìn nghiêng | Tay di lên, góc nhìn nâng cao; tay di xuống, góc nhìn hạ thấp |
+
+## ⚙️ Cấu Hình Nâng Cao
+
+Nếu bạn quen thuộc với code, có thể điều chỉnh thêm các thông số hình ảnh trong object `CONFIG` ở file `src/App.tsx`:
+
+```typescript
+const CONFIG = {
+  colors: { ... }, // Thay đổi màu cây, đèn, viền
   counts: {
-    foliage: 15000,   // 修改树叶粒子数量 (配置低可能会卡)
-    ornaments: 300,   // 修改悬挂的照片/拍立得数量
-    lights: 400       // 修改彩灯数量
+    foliage: 15000,   // Thay đổi số lượng hạt lá cây (cấu hình thấp có thể bị lag)
+    ornaments: 300,   // Thay đổi số lượng ảnh/polaroid treo
+    lights: 400       // Thay đổi số lượng đèn màu
   },
-  tree: { height: 22, radius: 9 }, // 修改树的大小
+  tree: { height: 22, radius: 9 }, // Thay đổi kích thước cây
   // ...
 };
-### 📄 License
-MIT License. Feel free to use and modify for your own holiday celebrations!
-### Merry Christmas! 🎄✨
+```
 
+## 📄 Giấy Phép
+
+MIT License. Thoải mái sử dụng và chỉnh sửa cho những dịp lễ của riêng bạn!
+
+## 🎄✨ Chúc Mừng Giáng Sinh!
